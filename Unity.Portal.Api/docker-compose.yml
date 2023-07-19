@@ -1,0 +1,82 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP.NET Core service.
+
+version: '3.9'
+
+networks:
+  common-network:
+    name: common-network  
+
+services:
+  unity-portal-api-scoring:
+    image: unity-portal-api-scoring
+    build:
+      context: /Unity.Portal.Api.Scoring
+      dockerfile: Dockerfile
+    ports:
+      - 5080:5080
+    networks:
+      - common-network
+    depends_on:
+      unity-portal-scoring-db:
+        condition: service_healthy
+
+  unity-portal-scoring-db:    
+    image: postgres:10.5
+    restart: always
+    user: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    logging:
+      options:
+        max-size: 10m
+        max-file: "3"
+    ports:
+      - "5501:5432"
+    volumes: 
+      - ./postgres-data:/var/lib/postgresql/scoring-data    
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+      start_period: 10s
+    networks:
+      - common-network  
+
+  unity-portal-api-workitems:
+    image: unity-portal-api-workitems
+    build:
+      context: /Unity.Portal.Api.WorkItems
+      dockerfile: Dockerfile
+    ports:
+      - 5090:5090
+    networks:
+      - common-network
+    depends_on:
+      unity-portal-workitems-db:
+        condition: service_healthy
+  
+  unity-portal-workitems-db:    
+    image: postgres:10.5
+    restart: always
+    user: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    logging:
+      options:
+        max-size: 10m
+        max-file: "3"
+    ports:
+      - "5502:5432"
+    volumes: 
+      - ./postgres-data:/var/lib/postgresql/workitems-data    
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+      start_period: 10s
+    networks:
+      - common-network  

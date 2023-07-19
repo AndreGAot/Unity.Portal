@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33801.468
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Portal.Orchestrator", "Unity.Portal.Orchestrator\Unity.Portal.Orchestrator\Unity.Portal.Orchestrator.csproj", "{86A4F34F-7D36-4EBD-87D6-407E97AB7D37}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unity.Portal.Web", "Unity.Portal.Web", "{332B535C-0E05-4C4B-8595-AA5191D87AC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Portal.Web", "Unity.Portal.Web\Unity.Portal.Web\Unity.Portal.Web.csproj", "{27D36B1C-8B9E-4F96-93AF-11B2D8F20AEB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unity.Portal.Api", "Unity.Portal.Api", "{09C0527C-A5F5-45F6-AFC9-C4A39EF4CD1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Portal.Api.WorkItems", "Unity.Portal.Api\Unity.Portal.Api.WorkItems\Unity.Portal.Api.WorkItems.csproj", "{D2F35AF1-A454-49DF-AA43-C6AE5DD1B930}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Portal.Api.Scoring", "Unity.Portal.Api\Unity.Portal.Api.Scoring\Unity.Portal.Api.Scoring.csproj", "{89DD0EC5-BDA1-4A66-A0A3-B8C0789B0175}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86A4F34F-7D36-4EBD-87D6-407E97AB7D37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86A4F34F-7D36-4EBD-87D6-407E97AB7D37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86A4F34F-7D36-4EBD-87D6-407E97AB7D37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86A4F34F-7D36-4EBD-87D6-407E97AB7D37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27D36B1C-8B9E-4F96-93AF-11B2D8F20AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27D36B1C-8B9E-4F96-93AF-11B2D8F20AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27D36B1C-8B9E-4F96-93AF-11B2D8F20AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27D36B1C-8B9E-4F96-93AF-11B2D8F20AEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2F35AF1-A454-49DF-AA43-C6AE5DD1B930}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2F35AF1-A454-49DF-AA43-C6AE5DD1B930}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2F35AF1-A454-49DF-AA43-C6AE5DD1B930}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2F35AF1-A454-49DF-AA43-C6AE5DD1B930}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89DD0EC5-BDA1-4A66-A0A3-B8C0789B0175}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89DD0EC5-BDA1-4A66-A0A3-B8C0789B0175}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89DD0EC5-BDA1-4A66-A0A3-B8C0789B0175}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89DD0EC5-BDA1-4A66-A0A3-B8C0789B0175}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5120ABC-76F7-4400-96A5-C38EAC5C4F08}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{27D36B1C-8B9E-4F96-93AF-11B2D8F20AEB} = {332B535C-0E05-4C4B-8595-AA5191D87AC8}
+		{D2F35AF1-A454-49DF-AA43-C6AE5DD1B930} = {09C0527C-A5F5-45F6-AFC9-C4A39EF4CD1E}
+		{89DD0EC5-BDA1-4A66-A0A3-B8C0789B0175} = {09C0527C-A5F5-45F6-AFC9-C4A39EF4CD1E}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,18 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP.NET Core service.
+
+version: '3.9'
+
+services:
+  unityapplicationapi:
+    image: unityapplicationapi
+    build:
+      context: .
+      dockerfile: Unity.Application.Api/Dockerfile
+      args:
+        - configuration=Debug
+    ports:
+      - 5090:5090
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw

@@ -1,0 +1,18 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP.NET Core service.
+
+version: '3.9'
+
+networks:
+  common-network:
+    name: common-network  
+
+services:
+  unity-portal-web:
+    image: unity-portal-web
+    build:
+      context: /Unity.Portal.Web
+      dockerfile: Dockerfile
+    ports:
+      - 5050:5050
+    networks:
+      - common-network
